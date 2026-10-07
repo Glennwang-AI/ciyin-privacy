@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>隐私政策 · 词隐AI填词助手</title>
+<meta name="theme-color" content="#1a2332" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #1a2332;
+    --ink-soft: #3d4a5c;
+    --mist: #e8eef4;
+    --paper: #f3f6f9;
+    --accent: #2a6f7c;
+    --line: #c5d0dc;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background:
+      radial-gradient(ellipse 80% 40% at 0% 0%, rgba(42, 111, 124, 0.08), transparent 50%),
+      linear-gradient(180deg, var(--mist), var(--paper));
+    color: var(--ink);
+    font-family: "Source Sans 3", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 56px 24px 40px; }
+  a { color: var(--accent); }
+  .back { display: inline-block; margin-bottom: 28px; font-size: 14px; text-decoration: none; }
+  .back:hover { text-decoration: underline; }
+  h1 {
+    font-family: "Noto Serif SC", "Songti SC", serif;
+    font-size: 26px;
+    font-weight: 500;
+    margin: 0 0 4px;
+  }
+  .meta { font-size: 13px; color: #6b7a8a; margin-bottom: 32px; }
+  h2 {
+    font-family: "Noto Serif SC", "Songti SC", serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--accent);
+    margin-top: 36px;
+  }
+  h3 { font-size: 15.5px; margin-top: 24px; color: var(--ink); }
+  p, li { font-size: 15px; color: var(--ink-soft); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  th, td {
+    border: 1px solid var(--line);
+    padding: 8px 10px;
+    text-align: left;
+  }
+  th { background: #e4ebf1; color: var(--ink); }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px dashed var(--line);
+    font-size: 12.5px;
+    color: #6b7a8a;
+    text-align: center;
+  }
+  footer a { color: #6b7a8a; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="https://ci.gushici.pro/">&larr; 返回首页</a>
+
+    <h1>词隐AI填词助手 隐私政策</h1>
+    <div class="meta">生效日期：2026-08-28 · 最近更新：2026-10-04</div>
+
+    <p>「词隐AI填词助手」（品牌简称「词隐」，以下简称"本产品"）由王嘉彬（个人，与「诗隐AI近体诗创作助手」备案主体一致，主体备案号京ICP备2026014346号）开发和运营。我们非常重视你的隐私，本政策说明本产品如何处理你的信息。</p>
+
+    <h2>1. 总览：本地优先</h2>
+    <p>本产品的核心功能（词牌词谱查询、平仄格律检测、韵部/用典查询、作品集管理）完全在你的设备本地运行，无需注册、无需登录，不会将你的词稿内容上传到我们的服务器——因为我们没有为此设立任何后端服务器。你的词稿存储在设备本地（IndexedDB / localStorage），仅你自己可以访问。</p>
+    <p>以下功能为<strong>可选</strong>，仅在你主动开启并使用时才会产生网络请求。</p>
+
+    <h2>2. 可选功能与数据处理</h2>
+
+    <h3>2.1 AI 辅助（改律 / 起句 / 续写等）</h3>
+    <ul>
+      <li>该功能默认关闭，需要你在设置中主动配置模型服务的 API Key（BYOK，自带密钥模式，默认对接阿里云百炼）后才可使用</li>
+      <li>首次使用前会弹出联网同意提示，你同意后才会发起请求</li>
+      <li>使用时，你输入的主题、词稿片段等内容会发送至你自行配置的模型服务商（默认阿里云百炼 DashScope），用于生成写作建议</li>
+      <li>你的 API Key 与用量记录仅保存在你的设备本地浏览器存储中，我们不会收集、存储或转发你的 Key</li>
+      <li>关闭 AI 辅助功能后，本产品仍可离线完成格律检测、词谱查询等全部核心功能</li>
+    </ul>
+
+    <h3>2.2 手稿识别（从图识别）</h3>
+    <ul>
+      <li>该功能会将你提供的图片发送至千问 VL（视觉语言模型）服务进行文字识别，识别结果会在你确认后写入正文</li>
+      <li>图片仅用于本次识别请求，我们不会另行留存</li>
+    </ul>
+
+    <h3>2.3 云备份（可选、无需注册）</h3>
+    <ul>
+      <li>本功能不是账号级实时同步，而是"备份/恢复"工具，且不经过我们的服务器</li>
+      <li>支持写入你网盘客户端已同步的本地文件夹（通过浏览器 File System Access API 直接读写你选择的本地目录）</li>
+      <li>支持 WebDAV（如坚果云等），使用你自己的账号凭证，数据直接从你的设备传输到你自己的 WebDAV 服务，不经过本产品的任何中间服务器</li>
+      <li>我们无法访问你存储在网盘或 WebDAV 服务中的任何内容</li>
+    </ul>
+
+    <h3>2.4 错误上报（可选，取决于我们的构建配置）</h3>
+    <ul>
+      <li>若启用，仅在程序发生异常时上报：错误信息、调用栈、页面路径（不含网址参数）、浏览器标识（User-Agent）、App 版本号、运行平台；发到词隐自有服务器（与 AI 托管代理同一服务），只写入服务日志，不另存数据库</li>
+      <li><strong>不会</strong>包含你的词稿内容、AI 对话内容或任何创作素材</li>
+      <li>用于帮助我们定位和修复缺陷，不用于识别个人身份；可在作品面板「关于」勾选「不记录匿名使用进度，也不发送错误报告」关闭</li>
+    </ul>
+
+    <h3>2.5 匿名使用事件（可选）</h3>
+    <ul>
+      <li>仅记录：打开应用、选择词牌、写下第一字、第一次全词合律；可另记是否用过「试填此句」（旁路，不挡主进度）</li>
+      <li>另记各写作工具（换字、点韵字、点平仄字、同格名句、AI 生成、保存、复制、分享等）在本机<strong>第一次</strong>被使用，每种只发一次，只含工具名称</li>
+      <li>可附带词牌 id、版本号、运行平台；<strong>不含词稿、标题或任何创作内容</strong></li>
+      <li>当前发行版会把上述事件匿名发到词隐自有服务器（与错误上报同一服务），只写入服务日志；未配置采集地址的构建只存在你的设备本地</li>
+      <li>可在作品面板「关于」勾选「不记录匿名使用进度，也不发送错误报告」关闭；也可在浏览器控制台执行 <code>localStorage.setItem('ci-funnel-off','1')</code></li>
+    </ul>
+
+    <h3>2.6 举报 AI 输出（你主动点击时）</h3>
+    <ul>
+      <li>AI 候选卡上的「举报」用于反馈不当内容；只有你点击并确认后才发送</li>
+      <li>只发送被举报的那条 AI 候选文本（截取前 600 字）、生成场景、版本号、运行平台；<strong>不含你的词稿与 Key</strong></li>
+      <li>发到词隐自有服务器（与错误上报同一服务），只写入服务日志，用于审查和改进 AI 输出；未配置该服务的构建会改为打开邮件草稿，由你决定是否发送</li>
+    </ul>
+
+    <h2>3. 我们不会做的事</h2>
+    <ul>
+      <li>不会要求你注册账号或提供手机号 / 身份信息才能使用核心功能</li>
+      <li>除匿名使用事件与错误上报（可在「关于」关闭）外，不会在你未主动开启相关功能时发起网络请求</li>
+      <li>不会将你的词稿内容用于广告定向、用户画像或出售给第三方</li>
+      <li>不会在你未同意的情况下把内容发送给 AI 服务商</li>
+    </ul>
+
+    <h2>4. 你的权利与控制</h2>
+    <ul>
+      <li>你可以随时在设置中查看、修改或清除已保存的 AI Key、联网同意状态</li>
+      <li>你可以随时导出全部作品集数据（用于备份或迁移）</li>
+      <li>你可以随时清除本产品在设备上存储的全部本地数据（作品集、偏好设置、缓存）——清除后本产品仍可正常使用，只是本地记录会重置</li>
+      <li>你可以在作品面板「关于」关闭匿名使用进度记录与错误上报（均不含词稿）</li>
+      <li>关闭「AI 辅助」/「云备份」入口后，相关网络请求路径完全不会被触发（构建期开关，非仅界面隐藏）</li>
+    </ul>
+
+    <h2>5. 第三方服务</h2>
+    <p>本产品在你主动使用可选功能时，可能会与以下第三方服务发生数据交互，具体处理规则以其官方隐私政策为准：</p>
+    <table>
+      <tr><th>服务</th><th>用途</th><th>触发条件</th></tr>
+      <tr><td>阿里云百炼（DashScope）</td><td>AI 写作辅助</td><td>你配置 Key 并主动使用 AI 功能</td></tr>
+      <tr><td>千问 VL</td><td>手稿图片识别</td><td>你主动上传图片识别</td></tr>
+      <tr><td>WebDAV 服务商（如坚果云）</td><td>云备份</td><td>你主动配置并使用云备份</td></tr>
+      <tr><td>错误监控服务（如启用）</td><td>崩溃/异常诊断</td><td>程序异常时自动触发（不含词稿内容）</td></tr>
+      <tr><td>匿名使用事件</td><td>打开 / 选牌 / 第一字 / 第一次合律</td><td>不含词稿；可在「关于」关闭</td></tr>
+    </table>
+
+    <h2>6. 未成年人</h2>
+    <p>本产品不主动收集未成年人个人信息。若你是未成年人，请在监护人指导下使用涉及联网的可选功能。</p>
+
+    <h2>7. 政策更新</h2>
+    <p>我们可能会更新本政策以反映产品功能变化。重大变更会在本产品内或官网显著位置提示。</p>
+
+    <h2>8. 联系我们</h2>
+    <p>如你对本政策有任何疑问，或希望行使个人信息相关权利，请通过以下方式联系我们：</p>
+    <ul>
+      <li>邮箱：<a href="mailto:support@gushici.pro">support@gushici.pro</a></li>
+      <li>官网：<a href="https://ci.gushici.pro/">ci.gushici.pro</a></li>
+    </ul>
+
+    <footer>
+      <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">京ICP备2026014346号-1</a>
+    </footer>
+  </div>
+</body>
+</html>
